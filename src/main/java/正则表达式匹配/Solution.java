@@ -1,5 +1,6 @@
 package 正则表达式匹配;
 
+
 public class Solution {
     /*
     LeetCode 10th
@@ -52,6 +53,7 @@ public class Solution {
         如果p遍历之后如果s没遍历完全返回false，否则返回true。
      */
     public boolean isMatch(String s, String p) {
+        System.out.println();
         char temp = '\n' ;
         char temp1 = '\n';
         boolean istemp = false;
@@ -88,6 +90,6 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.isMatch("mississippi","mis*sis*ip*."));
+        System.out.println(solution.isMatch(null,"mis*sis*ip*."));
     }
 }
