@@ -53,7 +53,7 @@ public class Solution {
         如果p遍历之后如果s没遍历完全返回false，否则返回true。
      */
     public boolean isMatch(String s, String p) {
-        System.out.println();
+        //未实现
         char temp = '\n' ;
         char temp1 = '\n';
         boolean istemp = false;
@@ -88,8 +88,47 @@ public class Solution {
         return true;
     }
 
+    /*
+    思路2 ：
+        动态规划
+        思路一通过暂存位保存*前面的字符，但是存在*匹配0个带匹配字符情况，如a可以与a*a匹配，这种情况直接处理很难。
+            另外还有a*b*a可以与aa匹配等问题，都使得增加暂存状态位的方式很难实现程序功能。
+
+        所以使用动态规划思想，通过状态转移方程实现。
+        首先创建一个二维数组boolean[s.length()+1][p.length()+1]表示状态,(boolean默认值为false)，接下来需要考虑的是
+        s的前i位于p的前j位是否匹配取决于什么
+            1. p[j] == s[i] : dp[i][j] = dp[i-1][j-1] 如果s的第i位于p的第j位相同或者p的第j位为'.'，即该位匹配，这时状态转移取决于i-1和j-1是否匹配
+            2. p[j] == '*' 这个时候就是状态方程需要分多种情况
+                2.1  p[j-1] == s[i] || p[i-1] = '.'  :  p[i][j] = (dp[i-1][j]||dp[i][j-1]||dp[i][j-2])  这种情况表示*前一位于s第i位匹配时有三种情况继续匹配：
+                    dp[i-1][j]||dp[i][j-1]||dp[i][j-2]，分别表示状态与 匹配多次，匹配1次，匹配0次保持一致。
+                2.2  p[j-1] != s[i] && p[i-1] != '.'  dp[i][j] = dp[i][j-2]  这种情况表示*前一位于s第i位未匹配成功，状态转移与匹配0次的结果一致。
+        需要注意的是初始状态的设置，dp[0][0]位true，p的第j位为'*'时状态dp[0][i+1] = dp[0][i-1]，否则类似于aab与c*a*b不匹配，完善匹配开始节点。
+     */
+    public boolean isMatch1(String s, String p) {
+        boolean[][] dp = new boolean[s.length()+1][p.length()+1];
+        dp[0][0] = true;
+        for(int i = 0;i<p.length();i++) {
+            if(p.charAt(i)=='*') dp[0][i+1] = dp[0][i-1];
+        }
+        for(int j=1;j<=p.length();j++){
+            for(int i=1;i<=s.length();i++){
+                if(s.charAt(i-1)==p.charAt(j-1)||p.charAt(j-1)=='.'){
+                    dp[i][j] = dp[i-1][j-1];
+                } else if(p.charAt(j-1) =='*'){
+                    if(s.charAt(i-1)==p.charAt(j-2)||p.charAt(j-2)=='.'){
+                        dp[i][j] = (dp[i-1][j]||dp[i][j-1]||dp[i][j-2]);
+                    }else {
+                        dp[i][j] = dp[i][j-2];
+                    }
+                }
+            }
+        }
+        return dp[s.length()][p.length()];
+    }
+
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.isMatch(null,"mis*sis*ip*."));
+
+        System.out.println(solution.isMatch1("aab","c*a*b"));
     }
 }
