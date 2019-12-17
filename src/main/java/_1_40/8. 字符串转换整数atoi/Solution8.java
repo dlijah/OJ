@@ -1,7 +1,7 @@
 package 字符串转换整数atoi;
 
 
-public class Solution {
+public class Solution8 {
     /*
     leetcode 8th
     题目：
@@ -72,7 +72,7 @@ public class Solution {
 
     public static void main(String[] args) {
         String str = "-+1";
-        Solution solution = new Solution();
+        字符串转换整数atoi.Solution8 solution = new 字符串转换整数atoi.Solution8();
         System.out.println(solution.myAtoi(str));
     }
 }

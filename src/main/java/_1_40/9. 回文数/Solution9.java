@@ -2,7 +2,7 @@ package 回文数;
 
 import java.util.ArrayList;
 
-public class Solution {
+public class Solution9 {
     /*
     LeetCode 9th
     题目：
@@ -90,7 +90,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        回文数.Solution9 solution = new 回文数.Solution9();
         System.out.println(solution.isPalindrome2(101));
     }
 

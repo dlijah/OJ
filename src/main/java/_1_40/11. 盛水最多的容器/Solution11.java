@@ -11,7 +11,7 @@ package 盛水最多的容器;
         输出: 49
 
 */
-public class Solution {
+public class Solution11 {
     /*
     思路1:
         穷举
@@ -55,7 +55,7 @@ public class Solution {
 
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        盛水最多的容器.Solution11 solution = new 盛水最多的容器.Solution11();
         int[] ints ={1,8};
         System.out.println(solution.maxArea(ints));
     }

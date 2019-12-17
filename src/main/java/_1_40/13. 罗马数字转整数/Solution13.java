@@ -1,6 +1,6 @@
 package 罗马数字转整数;
 
-public class Solution {
+public class Solution13 {
     /*
     leetcode 13th
     题目：
@@ -57,7 +57,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        罗马数字转整数.Solution13 solution = new 罗马数字转整数.Solution13();
         System.out.println(solution.romanToInt("MMCMXCIV"));
     }
 }

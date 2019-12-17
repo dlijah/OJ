@@ -1,7 +1,7 @@
 package Z字形变换;
 
 
-public class Solution {
+public class Solution6 {
     /*
     leetcode 6th
     题目：

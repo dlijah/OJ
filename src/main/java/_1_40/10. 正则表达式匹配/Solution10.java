@@ -1,7 +1,7 @@
 package 正则表达式匹配;
 
 
-public class Solution {
+public class Solution10 {
     /*
     LeetCode 10th
     题目：
@@ -127,7 +127,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        正则表达式匹配.Solution10 solution = new 正则表达式匹配.Solution10();
 
         System.out.println(solution.isMatch1("aab","c*a*b"));
     }

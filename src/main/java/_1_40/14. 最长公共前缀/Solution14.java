@@ -1,8 +1,6 @@
 package 最长公共前缀;
 
-import sun.security.krb5.KrbApRep;
-
-public class Solution {
+public class Solution14 {
     /*
     leetcode 14th
     题目：
@@ -41,7 +39,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        最长公共前缀.Solution14 solution = new 最长公共前缀.Solution14();
         String[] strs = {"aa","a"};
         System.out.println(solution.longestCommonPrefix(strs));
     }

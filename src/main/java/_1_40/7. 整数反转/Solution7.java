@@ -1,7 +1,7 @@
 package 整数反转;
 
 
-public class Solution {
+public class Solution7 {
     /*
     leetcode 7th
     题目：
@@ -76,7 +76,7 @@ public class Solution {
 
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.reverse2(-1230));
+        整数反转.Solution7 solution7 = new 整数反转.Solution7();
+        System.out.println(solution7.reverse2(-1230));
     }
 }
