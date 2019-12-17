@@ -53,7 +53,7 @@ public class Solution6 {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution6 solution = new Solution6();
         System.out.println(solution.convert("LEETCODEISHIRING" , 3));
     }
 }
