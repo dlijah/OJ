@@ -13,38 +13,20 @@ public class Test7 {
         详细思路见图片。
      */
     public static class MList<T> {
-        // 插入栈，只用于插入的数据
-        private Stack<T> stack1 = new Stack<>();
-        // 弹出栈，只用于弹出数据
-        private Stack<T> stack2 = new Stack<>();
+        Stack<Integer> stack1 = new Stack<Integer>();
+        Stack<Integer> stack2 = new Stack<Integer>();
 
-        public MList() {
+        public void push(int node) {
+            stack1.push(node);
         }
 
-        // 添加操作，成在队列尾部插入结点
-        public void appendTail(T t) {
-            stack1.add(t);
-        }
-
-        // 删除操作，在队列头部删除结点
-        public T deleteHead() {
-
-            // 先判断弹出栈是否为空，如果为空就将插入栈的所有数据弹出栈，
-            // 并且将弹出的数据压入弹出栈中
-            if (stack2.isEmpty()) {
-                while (!stack1.isEmpty()) {
-                    stack2.add(stack1.pop());
+        public int pop() {
+            if (stack2.empty()) {  //为空时将栈1的元素“倒进去”
+                while (!stack1.empty()) {
+                    stack2.push(stack1.pop());
                 }
             }
-
-            // 如果弹出栈中还没有数据就抛出异常
-            if (stack2.isEmpty()) {
-                throw new RuntimeException("No more element.");
-            }
-
-            // 返回弹出栈的栈顶元素，对应的就是队首元素。
             return stack2.pop();
         }
     }
-
 }
