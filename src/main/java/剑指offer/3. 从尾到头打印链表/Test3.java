@@ -3,7 +3,7 @@ package 剑指offer.从尾到头打印链表;
 
 import java.util.Stack;
 
-public class Test5 {
+public class Test3 {
     /**
      * 结点对象
      */

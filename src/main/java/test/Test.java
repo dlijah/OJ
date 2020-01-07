@@ -12,8 +12,9 @@ import java.util.concurrent.FutureTask;
 public class Test {
 
     public static void main(String[] args) {
-        int[] ints = new int[]{0,1,2,3,4,5,6,7,8,9};
-        System.out.println(Arrays.toString(Arrays.copyOfRange(ints , 1,3)));
-
+//        int[] ints = new int[]{0,1,2,3,4,5,6,7,8,9};
+//        System.out.println(Arrays.toString(Arrays.copyOfRange(ints , 1,3)));
+        String a = "asdefef";
+        System.out.println(a.lastIndexOf("ef"));
     }
 }
