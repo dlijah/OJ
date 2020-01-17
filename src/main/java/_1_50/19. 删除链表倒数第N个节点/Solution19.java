@@ -1,4 +1,4 @@
-package _1_40.删除链表倒数第N个节点;
+package _1_50.删除链表倒数第N个节点;
 
 public class Solution19 {
     /*

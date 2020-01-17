@@ -1,13 +1,10 @@
-package test;
+package _301_350.零钱兑换;
 
-import jdk.internal.org.objectweb.asm.Handle;
+import test.Test;
 
-import java.util.*;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
+import java.util.Arrays;
 
-public class Test {
+public class Solution322 {
 
 
     public int coinChange(int[] coins, int amount) {

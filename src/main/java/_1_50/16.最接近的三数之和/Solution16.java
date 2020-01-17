@@ -1,7 +1,6 @@
-package _1_40.最接近的三数之和;
+package _1_50.最接近的三数之和;
 
 import java.util.Arrays;
-import java.util.Map;
 
 public class Solution16 {
     /*

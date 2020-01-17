@@ -1,4 +1,4 @@
-package _1_40.四数之和;
+package _1_50.四数之和;
 
 import java.util.ArrayList;
 import java.util.Arrays;
