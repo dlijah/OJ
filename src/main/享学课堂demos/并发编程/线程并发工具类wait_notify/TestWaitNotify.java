@@ -1,4 +1,4 @@
-package demo.线程并发工具类;
+package 并发编程.线程并发工具类wait_notify;
 
 public class TestWaitNotify {
     private static Express express = new Express(0,Express.CITY);
