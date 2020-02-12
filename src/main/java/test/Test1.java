@@ -12,7 +12,7 @@ public class Test1 {
         // byte 数组转化成字符串
         String s2 = new String(bytes , "utf-8");
 //        List list = Collections.synchronizedList(new ArrayList<>());
-//        List list = new CopyOnWriteArrayList();
+//        list = new CopyOnWriteArrayList();
 //        list = Collections.unmodifiableList(list);
 //        list.add("");
         int[] a = new int[]{1,2};
@@ -34,12 +34,19 @@ public class Test1 {
             add("3");
             add("4");
         }};
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).equals("3")) {
-                list.remove(i);
-//                i--;
-            }
-        }
+//        for (int i = 0; i < list.size(); i++) {
+//            if (list.get(i).equals("3")) {
+//                list.remove(i);
+////                i--;
+//            }
+//        }
+        String[] strings = new String[6];
+        strings = list.toArray(strings);
         System.out.println(list.toString());
+        System.out.println(Arrays.toString(strings));
+
+        Integer as = 20;
+        Integer as1 = 20;
+        System.out.println(as1==as);
     }
 }
