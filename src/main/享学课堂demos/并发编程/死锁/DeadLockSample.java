@@ -1,4 +1,4 @@
-package demo.死锁;
+package 并发编程.死锁;
 
 public class DeadLockSample extends Thread {
     private String first;
